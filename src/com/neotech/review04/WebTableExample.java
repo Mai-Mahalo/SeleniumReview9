@@ -7,7 +7,8 @@ import org.openqa.selenium.WebElement;
 
 import com.neotech.utils.BaseClass;
 
-// Part 1-1 
+// Part 1-1 (34:00)
+// Watched !!
 
 public class WebTableExample extends BaseClass {
 	
