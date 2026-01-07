@@ -25,6 +25,8 @@ public class AmazonSearch {
 		// If you find "id", this is unique so we can use it.
 		
 		// input[@id='twotabsearchtextbox'] -> "input" is more specific
+		// "type" and more are called "attribute".
+		// "WebElement"... is need to storing element.
 		
 		// Select a area -> Inspect -> right click "Copy" -> "Copy XPath"
 		// Cmd + F to show the search box, then copy the XPath.

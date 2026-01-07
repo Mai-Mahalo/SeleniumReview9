@@ -12,7 +12,8 @@ import com.google.common.io.Files;
 import com.neotech.utils.CommonMethods;
 
 // Part 3-1 (10:00) NEED to complete the code
-// Need to update CommonMethods / "element"
+// Need to update CommonMethods / "element" (Maybe updated)
+
 public class UploadExample extends CommonMethods {
 
 	public static void main(String[] args) {

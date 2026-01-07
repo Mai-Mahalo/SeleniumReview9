@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.neotech.utils.BaseClass;
 
-//Part 4-1  (3:00)
-
 public class FileUploadPageElements extends BaseClass {
 	
 	// Without Page Factory

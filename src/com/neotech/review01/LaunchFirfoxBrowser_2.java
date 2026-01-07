@@ -3,15 +3,14 @@ package com.neotech.review01;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-// Part 1-1
+// Self-practice
 
-public class LaunchFirefoxBrowser {
+public class LaunchFirfoxBrowser_2 {
 	
 	public static void main(String[] args) throws InterruptedException {
-	
-		// This code will open the Mozilla Firefox Browser
+		
+		// This code will open the Mozilla Firefox Browswer
 		WebDriver driver = new FirefoxDriver();
-		// "driver"  = object, you can change any name you like.
 		
 		String url = "https://www.nytimes.com/games/wordle/";
 		
@@ -19,14 +18,14 @@ public class LaunchFirefoxBrowser {
 		driver.get(url);
 		
 		// Wait for 3 seconds
-		Thread.sleep(3000); // 3 seconds, check exception
+		Thread.sleep(3000); // 3 seconds
 		
 		String currentURL = driver.getCurrentUrl();
 		
-		if(url.equals(currentURL)) {
-			System.out.println("URLs are the same!");
+		if (url.equals(currentURL)) {
+			System.out.println("URLs are the same");
 		} else {
-			System.out.println("URLs are different!");
+			System.out.println("URLs are different");
 		}
 		
 		System.out.println("1 -> " + url);
@@ -37,13 +36,10 @@ public class LaunchFirefoxBrowser {
 		System.out.println("Title -> " + title);
 		
 		// Quit (close) the browser
-		driver.quit(); // driver.close(); is the same.
+		driver.quit();
 		
-		// URL would be different because they re-direct.
+		
 		
 	}
-	
 
-	}
-
-
+}

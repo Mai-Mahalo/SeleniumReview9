@@ -45,7 +45,6 @@ public class Task2 {
 		driver.findElement(By.id("submit")).click(); // if we find  "id" we do not need to use xPath and CSS.
 		// This above is not clickable, run-time error, this is because it is located below something. There is something on the top.
 		
-		
 		Thread.sleep(3000);
 		
 		driver.quit();	
