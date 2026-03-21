@@ -10,23 +10,29 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseClass {
 	
-	public static WebDriver driver; // animal
+	public static WebDriver driver; 
+	// = animal, need to be "static", "Polymorphism"
+	// It's accessible any methods in the class.
+	// Need to be "public" because we want to access from "Test2" class from another package. 
 	
 	// prepare the test
 	/**
 	 * This method will initialize the browser
 	 */
-	public static void setUp() {
+	public static void setUp() { // 1st method
 		
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 		// no need to import second time because we import once in the same package
 		
 		switch (ConfigsReader.getProperty("browser")) {
 		case "chrome":
-			driver = new ChromeDriver(); // up-casting // eg: dog
-			break;
+			// Open chrome browser
+			driver = new ChromeDriver(); // up-casting // eg: dog, move "public static WebDriver driver" 
+			//outside of the method
+			break; // without "break" they open chrome, then firefox as well.
 		case "firefox":
-			driver = new FirefoxDriver();
+			// Open firefox browser
+			driver = new FirefoxDriver(); // eg: cat
 			break; // need "break" otherwise both Chrome and Firefox opened.
 		default:
 			throw new RuntimeException("Other browsers are NOT supported!!!");
@@ -44,10 +50,10 @@ public class BaseClass {
 	/**
 	 * This method will quit the browser
 	 */
-	public static void tearDown() {
-		if(driver != null) { 
+	public static void tearDown() { // 2nd method
+		if(driver != null) {  // = if it is not null, they will close.
 			driver.quit(); 
-			// if you only have one method in "if", you can omit "{".
+			// if you only have one statement inside in "if", you can omit "{".
 		}
 			
 	}

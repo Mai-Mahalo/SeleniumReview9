@@ -41,7 +41,7 @@ public final class HandlingTimeAlert extends BaseClass {
 		// I want to wait for the Alert to be present in page
 		// Lets create a wait object for this
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.alertIsPresent()); // Default waiting time is 5 seconds
+		wait.until(ExpectedConditions.alertIsPresent()); 
 		
 		// If the alert is present after 3 seconds, wait will only wait 3 seconds
 		Alert alert = driver.switchTo().alert();

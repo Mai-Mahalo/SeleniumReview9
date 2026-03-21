@@ -13,6 +13,12 @@ public class ConfigsReader {
 	//encapsulation
 	
 	private static Properties prop;
+	// This used to be under try, but we've moved here because this is a local variable.
+	// We only can use it in the same method but we want to use it for another method in the same class.
+	// Need to be "static" to make it accessible.
+	// Added "private" to not accessible from other classes.
+	// = Encapsulation
+	
 
 	/**
 	 * This method will read the properties file
@@ -20,6 +26,10 @@ public class ConfigsReader {
 	 * @param filePath
 	 * @throws FileNotFoundException
 	 */
+	
+	// Type "//*" and Enter to make the documentation above.
+	// "void" does not return anything.
+	
 	public static void readProperties(String filePath) {
 
 		try {
@@ -40,6 +50,9 @@ public class ConfigsReader {
 	 * @param String key
 	 * @return String value
 	 */
+	
+	// key = "url", "browser" on "conf.properties" file.
+	// "String" means we want get a return with String.
 	public static String getProperty(String key) {
 		return prop.getProperty(key);
 	}

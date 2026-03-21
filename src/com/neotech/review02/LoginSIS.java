@@ -6,10 +6,12 @@ import org.openqa.selenium.WebElement;
 import com.neotech.utils.BaseClass;
 import com.neotech.utils.ConfigsReader;
 
-//part 3-1 (need to complete the code but the code can be different from the sample)
+//part 3-1 (the code can be different from the example because I used the different website.)
 
-//Login to SIS Web Application
-// https://sis.neotechacademy.com/ or https://neotech.vercel.app/sis-login (for me)
+// Login to SIS Web Application
+// https://sis.neotechacademy.com/ (can be accessible only from North America)
+// For those that the address doesn't work, use this one:
+// https://neotech.vercel.app/sis-login
 // username -> Admin
 // password -> Neotech$123
 
@@ -28,11 +30,16 @@ public class LoginSIS extends BaseClass {
 		Thread.sleep(1000);
 		
 		WebElement password = driver.findElement(By.name("password"));
-		password.sendKeys(ConfigsReader.getProperty("password")); // Neotech$123
+		password.sendKeys(ConfigsReader.getProperty("password")); //Neotech$123
 		Thread.sleep(1000);
 		
+		// The input whose type attribute has a value of submit
+		driver.findElement(By.xpath("//button[@type='button']")).click(); //Method chaining
 		
-
+		Thread.sleep(3000);
+		
+		tearDown();
+		
 	}
 
 }

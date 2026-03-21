@@ -1,7 +1,5 @@
 package com.neotech.review02;
 
-//part 3-2
-
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,7 +9,7 @@ import com.neotech.utils.BaseClass;
 
 //part 3-2 (Need to complete the code)
 
-//Go to https://demoqa.com/automation-practice-form
+// Go to https://demoqa.com/automation-practice-form
 // Check Female
 // Select all the Hobbies
 
@@ -20,14 +18,14 @@ public class CheckBoxDemo extends BaseClass {
 	public static void main(String[] args) throws InterruptedException {
 		setUp();
 
-		Thread.sleep(2000); // milisecond
+		Thread.sleep(1000); // milisecond
 
 		// Cannot click on the input, because the label does not allow
 		// driver.findElement(By.id("gender-radio-2")).click();
 
 		// We are able to click the label.
-		// driver.findElement(By.xpath("//label[@for='gender-radio-2']")).click();
 		driver.findElement(By.xpath("//label[@for='gender-radio-2']")).click();
+		// = "for=" = attribute
 
 		////////////////////////////////////////////////////////////////
 		// It will return the first WebElement with that xPath.
@@ -44,20 +42,25 @@ public class CheckBoxDemo extends BaseClass {
         
 		// 1. if xPath is wrong
 		// findElement() -> will throw an Exception
-		// findElements() -> will return all the WebElements inside a List (size = 0)
+		// findElements() -> will return an Empty List of WebElements (size = 0)
 		
 		// 2. If there are multiple WebElements with that xPath
 		// findElement() -> will return the first WebElement
 		// findElements() -> will return all the WebElements inside a List (size = 3) // 3 = hobby options
+		
+		// 3. If there is only one WebElement with that xPath
+		// findElement() -> will return the WebElement
+		// findElements()-> will return the WebElement inside a List (size = 1)
+        ////////////////////////////////////////////////////////////////
 		
 		// Locate all the checkboxes
 		List<WebElement> checkBoxList = driver.findElements(By.xpath("//div[@id='hobbiesWrapper']/div[2]//label"));
 		// all three labels will be returned.
 		
 		// Click all checkBoxes one-by-one
-		for (WebElement checkBox : checkBoxList) {
+		for (WebElement checkBox : checkBoxList) { // WebElement = data type of checkbox
 			checkBox.click();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		}
 
 		Thread.sleep(1000);

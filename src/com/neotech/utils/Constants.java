@@ -9,7 +9,8 @@ public class Constants {
 	// copied from "Test1" "String filePath = System.getProperty("user.dir") + "/configs/conf.properties";"
 	// Need to add "public" (to visible to in another package) and "static" (to visible another static class)
 	// Need to add "final" = can't change
-	// "/configs/conf.properties" comes from the file url of "conf.properties". 
+	// "/configs/conf.properties" comes from the conf.properties file url of "conf.properties". 
+	// "user.dir" is the standard property provided by Java.
 	public static final int EXPLICIT_WAIT_TIME = 25;
 	public static final int IMPLICIT_WAIT_TIME = 20;
 

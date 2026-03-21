@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 // Use a for loop
 // Wait 1 second between each navigation
 
-public class Task1_SelfPractice {
+public class Task1_2 {
 
 	public static void main(String[] args) throws InterruptedException {
 

@@ -17,8 +17,7 @@ public class HandlingFrames extends BaseClass {
 		setUp();
 		// How can I switch into the iframe?
 		// 1st way:
-		// driver.switchTo().frame(0); // It works properly if there is not iframe is
-		// added.
+		// driver.switchTo().frame(0); // It works properly if there is not iframe is added in the future.
 
 		// 2nd way:
 		// driver.switchTo().frame("age-frame"); // safer than the 1st way
@@ -38,7 +37,7 @@ public class HandlingFrames extends BaseClass {
 		ageBox.sendKeys("80");
 		Thread.sleep(1000);
 
-		// This will throw an exception NoSuchElementException
+		// This will throw an exception NoSuchElementException without "driver.switchTo().defaultContent();"
 		// because the focus is still on iframe
 		// We need to swtich back to the main content
 		driver.switchTo().defaultContent();

@@ -21,6 +21,7 @@ public class Test1 {
 		// Read property file
 		// I read the configuration file with only one line.
 		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
+		//ConfigsReader = class, readProperties = method
 		
 		String browser = ConfigsReader.getProperty("browser");
 		System.out.println("browser -> " + browser);
