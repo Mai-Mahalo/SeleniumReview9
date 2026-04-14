@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.neotech.utils.BaseClass;
 
 // Part 3-2 (27:00)
+// https://neotech.vercel.app/waits
 
 public class ExplicitWaitDemo extends BaseClass {
 

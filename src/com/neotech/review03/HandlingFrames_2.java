@@ -26,6 +26,9 @@ public class HandlingFrames_2 extends BaseClass {
 		Thread.sleep(1000);
 		
 		driver.switchTo().defaultContent();
+		driver.findElement(By.linkText("Nested iframes")).click();
+		Thread.sleep(2000);
+		
 		
 		
 		tearDown();
