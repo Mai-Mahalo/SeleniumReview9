@@ -34,8 +34,9 @@ public class ExplicitWaitDemo_2 extends BaseClass {
 		
 		Thread.sleep(3000);
 		
-		tearDown();
 		
+		tearDown();
+	
 		
 	}
 
