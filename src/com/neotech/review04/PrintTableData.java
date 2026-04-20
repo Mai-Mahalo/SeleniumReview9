@@ -23,6 +23,7 @@ public class PrintTableData extends BaseClass {
 
 		// The number of rows
 		int rows = driver.findElements(By.xpath("//table[@id='table2']/tbody/tr")).size();
+		
 		// The number of columns
 		int cols = driver.findElements(By.xpath("//table[@id='table2']/tbody/tr[1]/td")).size();
 
